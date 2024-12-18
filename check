@@ -1,0 +1,66 @@
+void check(int i, int j, int &a, int &b)//check các ô liền kề với ô hiện tại, nếu trống thì đánh vào ô đó
+{
+    if (_A[i - 1][j - 1].c == 0 && i - 1 >= 0 && j - 1 >= 0)
+    {
+        a = _A[i - 1][j - 1].x;
+        b = _A[i - 1][j - 1].y;
+        _A[i - 1][j - 1].c = 1;
+        return;
+    }
+
+    if (_A[i ][j - 1].c == 0  && j - 1 >= 0)
+    {
+        a = _A[i ][j - 1].x;
+        b = _A[i ][j - 1].y;
+        _A[i ][j - 1].c = 1;
+        return;
+    }
+
+    if (_A[i + 1][j - 1].c == 0 && i + 1 <12 && j - 1 >= 0)
+    {
+        a = _A[i + 1][j - 1].x;
+        b = _A[i + 1][j - 1].y;
+        _A[i + 1][j - 1].c = 1;
+        return;
+    }
+
+    if (_A[i - 1][j ].c == 0 && i - 1 >= 0 )
+    {
+        a = _A[i - 1][j ].x;
+        b = _A[i - 1][j ].y;
+        _A[i - 1][j ].c = 1;
+        return;
+    }
+
+    if (_A[i + 1][j ].c == 0 && i + 1 <12)
+    {
+        a = _A[i + 1][j ].x;
+        b = _A[i + 1][j ].y;
+        _A[i + 1][j ].c = 1;
+        return;
+    }
+
+    if (_A[i - 1][j + 1].c == 0 && i - 1 >= 0 && j + 1 <12)
+    {
+        a = _A[i - 1][j + 1].x;
+        b = _A[i - 1][j + 1].y;
+        _A[i - 1][j + 1].c = 1;
+        return;
+    }
+
+    if (_A[i ][j + 1].c == 0  && j + 1 <12)
+    {
+        a = _A[i ][j + 1].x;
+        b = _A[i ][j + 1].y;
+        _A[i ][j + 1].c = 1;
+        return;
+    }
+
+    if (_A[i + 1][j + 1].c == 0 && i + 1 <12 && j + 1 <12)
+    {
+        a = _A[i + 1][j + 1].x;
+        b = _A[i + 1][j + 1].y;
+        _A[i + 1][j + 1].c = 1;
+        return;
+    }
+}
