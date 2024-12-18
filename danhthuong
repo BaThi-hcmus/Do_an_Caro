@@ -1,0 +1,10 @@
+void danhthuong()//dánh vào 1 ô liền kê vs ô hiện tại mà vẫn còn trống, nếu ko tồn tại ô như vậy thì random 1 ô bất kì và đánh vào
+{
+    if (text==1)
+    {
+        GotoXY(m, n);
+        cout << "O";
+        _A[index1][index2].c = 1;
+    }
+    else bot();
+}
