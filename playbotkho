@@ -1,0 +1,84 @@
+int playbotkho()//chế độ khó
+{
+    nentrangchuden();
+    FixConsoleWindow();
+
+    
+    bool luotdanh = true;
+    nameplayervsbot(s1);
+    s2 = "BOT";
+    StartGame();
+    setConsoleColor(0, 47);
+    GotoXY(66, 14); cout << "Moves: ";
+    GotoXY(91, 14); cout << "Moves: ";
+    //setConsoleColor(0, 47);
+    GotoXY(65, 2); cout << s1;
+    GotoXY(90, 2); cout << s2;
+    GotoXY(1, 28);
+    GotoXY(LEFT + 2, TOP + 1);
+    int l = 0, r = 0;
+    while (1)
+    {
+
+
+        _COMMAND = toupper(_getch());
+        if (_COMMAND == 27)
+        {
+            ExitGame();
+            return 0;
+        }
+        else {
+            if (_COMMAND == 'A') MoveLeft();
+            else if (_COMMAND == 'W') MoveUp();
+            else if (_COMMAND == 'S') MoveDown();
+            else if (_COMMAND == 'D') MoveRight();
+            else if (_COMMAND == 13) {
+
+                for (int i = 0; i < 12; i++)
+                {
+                    for (int j = 0; j < 12; j++)
+                    {
+                        if (_A[i][j].x == _X && _A[i][j].y == _Y && _A[i][j].c == 0)
+                        {
+                            _A[i][j].c = -1;
+                            setConsoleColor(0, 47);
+                            GotoXY(_X, _Y); cout << "X";
+                            m = i; n = j;
+                            l = l + 1; GotoXY(74, 14); setConsoleColor(0, 47); cout << l; move1 = l;
+                            luotdanh = false;
+                            text =check1(i, j, m, n, index1, index2);
+                        }
+                    }
+                }
+            }
+            if (luotdanh == false)
+            {
+                switch (ProcessFinish(TestBoard())) {
+                case -1: case 1: case 0:
+                    AskContinue();
+                    break;
+                }
+               
+                if (checkbot4o() == 0)
+                {
+                    if (tancong4o() == 0)
+                    {
+                        if (checkbot3o() == 0)
+                        {
+                            if (tancong3o() == 0)
+                                danhthuong();
+                        }
+                    }
+                }
+                
+                r = r + 1; GotoXY(99, 14); setConsoleColor(0, 47); cout << r; move2 = r;
+                luotdanh = true;
+                switch (ProcessFinish(TestBoard())) {
+                case -1: case 1: case 0:
+                    AskContinue();
+                    break;
+                }
+            }
+        }
+    }
+}
