@@ -1,0 +1,78 @@
+void menuplaybot()
+{
+    system("cls");
+    setConsoleColor(0, 11);
+    GotoXY(50, 5); cout << "EASY";
+    setConsoleColor(0, 47);
+    GotoXY(50, 7); cout << "NORMAL";
+    GotoXY(50, 9); cout << "HARD";
+    int dem = 1, choice;
+    while (1)
+    {
+        GotoXY(0, 0);
+        _COMMAND = toupper(_getch());
+        if (_COMMAND == 'S' && dem < 5)
+            dem++;
+        else if (_COMMAND == 'W' && dem > 0) dem--;
+        else if (_COMMAND == 13)
+        {
+            choice = dem;
+            break;
+        }
+        if (dem == 1)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(50, 5); cout << "EASY";
+            setConsoleColor(0, 47);
+            GotoXY(50, 7); cout << "NORMAL";
+            GotoXY(50, 9); cout << "HARD";
+        }
+        else if (dem == 2)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(50, 7); cout << "NORMAL";
+            setConsoleColor(0, 47);
+            GotoXY(50, 5); cout << "EASY";
+            
+            GotoXY(50, 9); cout << "HARD";
+        }
+        else if (dem == 3)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(50, 9); cout << "HARD";
+            setConsoleColor(0, 47);
+            GotoXY(50, 5); cout << "EASY";
+            GotoXY(50, 7); cout << "NORMAL";
+            
+        }
+        else if (dem == 0) {
+            setConsoleColor(0, 11);
+            GotoXY(50, 9); cout << "HARD";
+            setConsoleColor(0, 47);
+            GotoXY(50, 5); cout << "EASY";
+            GotoXY(50, 7); cout << "NORMAL";
+            dem = 3;
+        }
+        else if (dem == 4)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(50, 5); cout << "EASY";
+            setConsoleColor(0, 47);
+            GotoXY(50, 7); cout << "NORMAL";
+            GotoXY(50, 9); cout << "HARD";
+            dem = 1;
+        }
+    }
+    switch (choice)
+    {
+    case 1:
+       playbotde();
+        break;
+    case 2:
+        playbotvua();
+        break;
+    case 3:
+        playbotkho();
+        break;
+    }
+}
