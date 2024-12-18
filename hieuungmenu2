@@ -1,0 +1,170 @@
+int hieuungmenu2()
+{
+    setConsoleColor(0, 11);
+    GotoXY(55, 17); cout << "CONTINUE";
+    setConsoleColor(0, 47);
+    GotoXY(55, 18);
+    cout << "DELETE FILE";
+    GotoXY(55, 19);
+    cout << "RETURN MENU";
+    GotoXY(55, 20);
+    cout << "SAVE GAME";
+    GotoXY(55, 21);
+    cout << "NEW GAME";
+    GotoXY(55, 22);
+    cout << "EXIT GAME";
+
+    int dem = 1;
+    while (1)
+    {
+        GotoXY(0, 0);
+        _COMMAND = toupper(_getch());
+        if (_COMMAND == 'S' && dem < 7)
+            dem++;
+        else if (_COMMAND == 'W' && dem > 0) dem--;
+        else if (_COMMAND == 13)
+        {
+            return dem;
+            break;
+        }
+        if (dem == 1)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(55, 17); cout << "CONTINUE";
+            setConsoleColor(0, 47);
+            GotoXY(55, 18);
+            cout << "DELETE FILE";
+            GotoXY(55, 19);
+            cout << "RETURN MENU";
+            GotoXY(55, 20);
+            cout << "SAVE GAME";
+            GotoXY(55, 21);
+            cout << "NEW GAME";
+            GotoXY(55, 22);
+            cout << "EXIT GAME";
+        }
+        else if (dem == 2)
+        {
+            
+            setConsoleColor(0, 11);
+            GotoXY(55, 18);
+            cout << "DELETE FILE";
+            setConsoleColor(0, 47);
+            
+            GotoXY(55, 17); cout << "CONTINUE";
+            
+            GotoXY(55, 19);
+            cout << "RETURN MENU";
+            GotoXY(55, 20);
+            cout << "SAVE GAME";
+            GotoXY(55, 21);
+            cout << "NEW GAME";
+            GotoXY(55, 22);
+            cout << "EXIT GAME";
+        }
+        else if (dem == 3)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(55, 19);
+            cout << "RETURN MENU";
+            
+            setConsoleColor(0, 47);
+            GotoXY(55, 17); cout << "CONTINUE";
+            GotoXY(55, 18);
+            cout << "DELETE FILE";
+            
+            GotoXY(55, 20);
+            cout << "SAVE GAME";
+            GotoXY(55, 21);
+            cout << "NEW GAME";
+            GotoXY(55, 22);
+            cout << "EXIT GAME";
+        }
+        else if (dem == 4)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(55, 20);
+            cout << "SAVE GAME";
+            setConsoleColor(0, 47);
+            GotoXY(55, 17); cout << "CONTINUE";
+            GotoXY(55, 18);
+            cout << "DELETE FILE";
+            GotoXY(55, 19);
+            cout << "RETURN MENU";
+            
+            GotoXY(55, 21);
+            cout << "NEW GAME";
+            GotoXY(55, 22);
+            cout << "EXIT GAME";
+        }
+        else if (dem == 5)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(55, 21);
+            cout << "NEW GAME";
+            setConsoleColor(0, 47);
+            GotoXY(55, 17); cout << "CONTINUE";
+            GotoXY(55, 18);
+            cout << "DELETE FILE";
+            GotoXY(55, 19);
+            cout << "RETURN MENU";
+            GotoXY(55, 20);
+            cout << "SAVE GAME";
+           
+            GotoXY(55, 22);
+            cout << "EXIT GAME";
+            
+        }
+        else if (dem == 6)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(55, 22);
+            cout << "EXIT GAME";
+            setConsoleColor(0, 47);
+            GotoXY(55, 17); cout << "CONTINUE";
+            GotoXY(55, 18);
+            cout << "DELETE FILE";
+            GotoXY(55, 19);
+            cout << "RETURN MENU";
+            GotoXY(55, 20);
+            cout << "SAVE GAME";
+            GotoXY(55, 21);
+            cout << "NEW GAME";
+           
+        }
+        else if (dem == 0) {
+            setConsoleColor(0, 11);
+            GotoXY(55, 22);
+            cout << "EXIT GAME";
+            setConsoleColor(0, 47);
+            GotoXY(55, 17); cout << "CONTINUE";
+            GotoXY(55, 18);
+            cout << "DELETE FILE";
+            GotoXY(55, 19);
+            cout << "RETURN MENU";
+            GotoXY(55, 20);
+            cout << "SAVE GAME";
+            GotoXY(55, 21);
+            cout << "NEW GAME";
+            dem = 6;
+        }
+        else if (dem == 7) {
+            
+
+            setConsoleColor(0, 11);
+            GotoXY(55, 17); cout << "CONTINUE";
+            setConsoleColor(0, 47);
+            GotoXY(55, 18);
+            cout << "DELETE FILE";
+            GotoXY(55, 19);
+            cout << "RETURN MENU";
+            GotoXY(55, 20);
+            cout << "SAVE GAME";
+            GotoXY(55, 21);
+            cout << "NEW GAME";
+            GotoXY(55, 22);
+            cout << "EXIT GAME";
+            dem = 1;
+        }
+    }
+}
