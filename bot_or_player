@@ -1,0 +1,62 @@
+void bot_or_player()
+{
+    system("cls");
+    setConsoleColor(0, 11);
+    GotoXY(50, 5); cout << "PLAYER VS PLAYER";
+    setConsoleColor(0, 47);
+    GotoXY(50, 7); cout << "PLAYER VS BOT";
+
+    int dem = 1,choice;
+    while (1)
+    {
+        GotoXY(0, 0);
+        _COMMAND = toupper(_getch());
+        if (_COMMAND == 'S' && dem < 5)
+            dem++;
+        else if (_COMMAND == 'W' && dem > 0) dem--;
+        else if (_COMMAND == 13)
+        {
+            
+            choice = dem;
+            break;
+        }
+        if (dem == 1)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(50, 5); cout << "PLAYER VS PLAYER";
+            setConsoleColor(0, 47);
+            GotoXY(50, 7); cout << "PLAYER VS BOT";
+        }
+        else if (dem == 2)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(50, 7); cout << "PLAYER VS BOT";
+            setConsoleColor(0, 47);
+            GotoXY(50, 5); cout << "PLAYER VS PLAYER";
+        }
+        else if (dem == 3)
+        {
+            setConsoleColor(0, 11);
+            GotoXY(50, 5); cout << "PLAYER VS PLAYER";
+            setConsoleColor(0, 47);
+            GotoXY(50, 7); cout << "PLAYER VS BOT";
+            dem = 1;
+        }
+        else if (dem == 0) {
+            setConsoleColor(0, 11);
+            GotoXY(50, 7); cout << "PLAYER VS BOT";
+            setConsoleColor(0, 47);
+            GotoXY(50, 5); cout << "PLAYER VS PLAYER";
+            dem = 2;
+        }
+    }
+    switch (choice)
+    {
+    case 1:
+        playgame();
+        break;
+    case 2:
+        menuplaybot();
+        break;
+    }
+}
