@@ -1,0 +1,45 @@
+void khung51()//tuong tu
+{
+    setConsoleColor(0, 15);
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 20);
+        cout << char(196);
+    }
+    GotoXY(51, 21);
+    cout << "      SOUND       ";
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 22);
+        cout << char(196);
+    }
+    GotoXY(50, 21); cout << char(179);
+    GotoXY(69, 21); cout << char(179);
+    GotoXY(50, 20); cout << char(218);
+    GotoXY(50, 22); cout << char(192);
+    GotoXY(69, 20); cout << char(191);
+    GotoXY(69, 22); cout << char(217);
+
+}
+void khung52()
+{
+    setConsoleColor(0, 11);
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 20);
+        cout << char(196);
+    }
+    GotoXY(51, 21);
+    cout << "      SOUND       ";
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 22);
+        cout << char(196);
+    }
+    GotoXY(50, 21); cout << char(179);
+    GotoXY(69, 21); cout << char(179);
+    GotoXY(50, 20); cout << char(218);
+    GotoXY(50, 22); cout << char(192);
+    GotoXY(69, 20); cout << char(191);
+    GotoXY(69, 22); cout << char(217);
+}
