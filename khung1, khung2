@@ -1,0 +1,44 @@
+void khung11()//ve khung new ko to mau
+{
+    setConsoleColor(0, 15);
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 8);
+        cout << char(196);
+    }
+    GotoXY(51, 9);
+    cout << "     NEW GAME     ";
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 10);
+        cout << char(196);
+    }
+    GotoXY(50, 9); cout << char(179);
+    GotoXY(69, 9); cout << char(179);
+    GotoXY(50, 8); cout << char(218);
+    GotoXY(50, 10); cout << char(192);
+    GotoXY(69, 8); cout << char(191);
+    GotoXY(69, 10); cout << char(217);
+}
+void khung12()//ve khung new game co to mau
+{
+    setConsoleColor(0, 11);
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 8);
+        cout << char(196);
+    }
+    GotoXY(51, 9);
+    cout << "     NEW GAME     ";
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 10);
+        cout << char(196);
+    }
+    GotoXY(50, 9); cout << char(179);
+    GotoXY(69, 9); cout << char(179);
+    GotoXY(50, 8); cout << char(218);
+    GotoXY(50, 10); cout << char(192);
+    GotoXY(69, 8); cout << char(191);
+    GotoXY(69, 10); cout << char(217);
+}
