@@ -1,0 +1,44 @@
+void draw_bird(int x, int y)
+{
+    //int x = 50, y = 5;
+    setConsoleColor(47, 47);
+    GotoXY(x + 1, y); cout << "********";
+    GotoXY(x, y + 1); cout << "**********";
+    GotoXY(x, y + 2); cout << "**********";
+    GotoXY(x, y + 3); cout << "**********";
+
+    setConsoleColor(0, 0);
+    GotoXY(x + 1, y + 2); cout << "**";
+    GotoXY(x + 7, y + 2); cout << "**";
+
+    setConsoleColor(14, 14);
+    GotoXY(x + 3, y + 3); cout << "****";
+
+    setConsoleColor(7, 7);
+    GotoXY(x + 3, y + 2); cout << "****";
+
+    setConsoleColor(4, 4);
+    GotoXY(x - 1, y + 4); cout << "************";
+    GotoXY(x - 2, y + 5); cout << "**************";
+    GotoXY(x - 3, y + 6); cout << "****************";
+    GotoXY(x - 3, y + 7); cout << "****************";
+    GotoXY(x - 3, y + 8); cout << "****************";
+    GotoXY(x - 2, y + 9); cout << "**************";
+    GotoXY(x - 1, y + 10); cout << "************";
+
+    setConsoleColor(7, 7);
+    GotoXY(x + 1, y + 5); cout << "********";
+    GotoXY(x + 1, y + 8); cout << "********";
+
+    setConsoleColor(47, 47);
+    GotoXY(x, y + 6); cout << "**********";
+    GotoXY(x, y + 7); cout << "**********";
+    //GotoXY(x, y+7); cout<<"**********";
+
+    setConsoleColor(14, 14);
+    GotoXY(x - 1, y + 9); cout << "****";
+    GotoXY(x - 1, y + 10); cout << "****";
+
+    GotoXY(x + 7, y + 9); cout << "****";
+    GotoXY(x + 7, y + 10); cout << "****";
+}
