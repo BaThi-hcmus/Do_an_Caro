@@ -1,0 +1,101 @@
+void xoakhung()//xóa 2 khung trong giao diện playgame
+{
+    setConsoleColor(15, 47);
+    for (int i = 65; i <= 85; i++)
+    {
+        GotoXY(i, 2); cout << char(196);
+    }
+    for (int i = 90; i <= 110; i++)
+    {
+        GotoXY(i, 2); cout << char(196);
+    }
+
+
+
+    for (int i = 65; i <= 85; i++)
+    {
+        GotoXY(i, 3); cout << char(196);
+    }
+    for (int i = 65; i <= 85; i++)
+    {
+        GotoXY(i, 3); cout << char(196);
+    }
+    for (int i = 90; i <= 110; i++)
+    {
+        GotoXY(i, 3); cout << char(196);
+    }
+    for (int i = 3; i <= 13; i++)
+    {
+        GotoXY(65, i); cout << char(179);
+    }
+    for (int i = 3; i <= 13; i++)
+    {
+        GotoXY(85, i); cout << char(179);
+    }
+    for (int i = 3; i <= 13; i++)
+    {
+        GotoXY(90, i); cout << char(179);
+    }
+    for (int i = 3; i <= 13; i++)
+    {
+        GotoXY(110, i); cout << char(179);
+    }
+    for (int i = 65; i <= 85; i++)
+    {
+        GotoXY(i, 13); cout << char(196);
+    }
+    for (int i = 90; i <= 110; i++)
+    {
+        GotoXY(i, 13); cout << char(196);
+    }
+
+
+    for (int i = 65; i <= 85; i++)
+    {
+        GotoXY(i, 14); cout << char(196);
+    }
+    for (int i = 90; i <= 110; i++)
+    {
+        GotoXY(i, 14); cout << char(196);
+    }
+    GotoXY(65, 3); cout << char(218);
+    GotoXY(65, 13); cout << char(192);
+    GotoXY(85, 3); cout << char(191);
+    GotoXY(85, 13); cout << char(217);
+
+    GotoXY(90, 3); cout << char(218);
+    GotoXY(90, 13); cout << char(192);
+    GotoXY(110, 3); cout << char(191);
+    GotoXY(110, 13); cout << char(217);
+
+    GotoXY(78, 5); cout << "*";
+    GotoXY(72, 5); cout << "*";
+    GotoXY(73, 6); cout << "*";
+    GotoXY(77, 6); cout << "*";
+    GotoXY(74, 7); cout << "*";
+    GotoXY(76, 7); cout << "*";
+    GotoXY(75, 8); cout << "*";
+    GotoXY(76, 9); cout << "*";
+    GotoXY(74, 9); cout << "*";
+    GotoXY(73, 10); cout << "*";
+    GotoXY(77, 10); cout << "*";
+    GotoXY(72, 11); cout << "*";
+    GotoXY(78, 11); cout << "*";
+
+    for (int i = 97; i <= 103; i++)
+    {
+        GotoXY(i, 5); cout << "*";
+    }
+    for (int i = 5; i <= 11; i++)
+    {
+        GotoXY(97, i); cout << "*";
+    }
+    for (int i = 5; i <= 11; i++)
+    {
+        GotoXY(103, i); cout << "*";
+    }
+    for (int i = 97; i <= 103; i++)
+    {
+        GotoXY(i, 11); cout << "*";
+    }
+}
