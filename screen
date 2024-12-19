@@ -1,0 +1,85 @@
+void screen()
+{
+    FixConsoleWindow();
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    int screenWidth;
+    if (GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi)) {
+        screenWidth = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+    }
+    const int xOffset = (screenWidth - 60) / 2;
+    displayScreen(xOffset);
+
+    // Vẽ hai khung trên màn hình
+    int boxWidth1 = 86;  // Chiều rộng của khung 1
+    int boxHeight = 12;   // Chiều cao của khung
+    int boxWidth2 = 25;  // Chiều rộng của khung 2
+
+    // Vẽ khung 1 
+    drawBox(5, 8, boxWidth1, boxHeight);
+
+    // Vẽ khung 2
+    drawBox(5 + boxWidth1 + 2, 8, boxWidth2, boxHeight);
+    //vector chứa các dòng để viết vào khung 1
+    vector<string> lines1 = {
+        "Game Instructions",
+        "1. Players take turns placing their marks on an empty spot.",
+        "2. The first player is 'X'.",
+        "3. Once a player places a mark on the board, the mark can't be changed.",
+        "4. The winner is the first to get 5 marks in a row horizontally, vertically, or",
+        "diagonally.",
+        "5. If all the spots are filled and neither player has 5 in a row,the game is",
+        "considered a draw."
+    };
+    writeTextInBox(5, 8, boxWidth1, boxHeight, lines1);
+
+    //vector chứa các dòng để viết vào khung 2
+    vector<string> lines2 = {
+      "Keyboard guild",
+        " 'A': Go left",
+        " 'S': Go up",
+        " 'D': Go right",
+        " 'W': Go down",
+        " 'Enter': Place mark",
+        " 'ESC':Exit the game"
+
+    };
+    writeTextInBox(5 + boxWidth1 + 2, 8, boxWidth2, boxHeight, lines2);
+
+    // Vẽ cạnh trên
+    for (int i = 44; i < 72; i++) {
+        GotoXY(i, 24);
+        cout << (char)196;
+    }
+
+    // Vẽ cạnh dưới
+    for (int i = 44; i < 72; i++) {
+        GotoXY(i, 26);
+        cout << (char)196;
+    }
+
+    // Vẽ cạnh trái và phải
+    for (int i =24; i < 27; i++) {
+        GotoXY(44, i);
+        cout << (char)179;
+        GotoXY(71, i);
+        cout << (char)179;
+    }
+
+    // Vẽ góc
+    GotoXY(44, 24);
+    cout << (char)218; // Góc trái trên
+    GotoXY(71, 24);
+    cout << (char)191; // Góc phải trên
+    GotoXY(44, 26);
+    cout << (char)192; // Góc trái dưới
+    GotoXY(71, 26);
+    cout << (char)217; // Góc phải dưới
+    GotoXY(45, 25);
+    cout << "ENTER de quay ve MENU GAME";
+    while (1)
+    {
+        char c = toupper(_getch());
+        if (c == 13) luachon();
+        else continue;
+   }
+}
