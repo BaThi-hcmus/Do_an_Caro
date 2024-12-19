@@ -1,0 +1,35 @@
+void dat(int x, int y)
+{
+    //int x = 10, y = 10;
+    for (int i = 0; i < 10; i += 2)
+    {
+        SetColor(2, 2);
+        GotoXY(x + i, y); cout << "*";
+        SetColor(10, 10);
+        GotoXY(x + 1 + i, y); cout << "*";
+    }
+
+    for (int i = 0; i < 10; i += 2)
+    {
+        SetColor(10, 10);
+        GotoXY(x + i, y + 1); cout << "*";
+        SetColor(2, 2);
+        GotoXY(x + 1 + i, y + 1); cout << "*";
+    }
+
+    for (int i = 0; i < 10; i += 2)
+    {
+        SetColor(2, 2);
+        GotoXY(x + i, y + 2); cout << "*";
+        SetColor(10, 10);
+        GotoXY(x + 1 + i, y + 2); cout << "*";
+    }
+
+    for (int i = 0; i < 10; i += 2)
+    {
+        SetColor(10, 10);
+        GotoXY(x + i, y + 3); cout << "*";
+        SetColor(2, 2);
+        GotoXY(x + 1 + i, y + 3); cout << "*";
+    }
+}
