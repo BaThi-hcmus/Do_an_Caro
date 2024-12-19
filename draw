@@ -1,0 +1,56 @@
+void draw()//vẽ 2 khung trong giao diện playgame
+{
+    for (int i = 65; i <= 85; i++)
+    {
+        GotoXY(i, 3); cout << char(196);
+    }
+    for (int i = 90; i <= 110; i++)
+    {
+        GotoXY(i, 3); cout << char(196);
+    }
+    for (int i = 3; i <= 13; i++)
+    {
+        GotoXY(65, i); cout << char(179);
+    }
+    for (int i = 3; i <= 13; i++)
+    {
+        GotoXY(85, i); cout << char(179);
+    }
+    for (int i = 3; i <= 13; i++)
+    {
+        GotoXY(90, i); cout << char(179);
+    }
+    for (int i = 3; i <= 13; i++)
+    {
+        GotoXY(110, i); cout << char(179);
+    }
+    for (int i = 65; i <= 85; i++)
+    {
+        GotoXY(i, 13); cout << char(196);
+    }
+    for (int i = 90; i <= 110; i++)
+    {
+        GotoXY(i, 13); cout << char(196);
+    }
+    GotoXY(65, 3); cout << char(218);
+    GotoXY(65, 13); cout << char(192);
+    GotoXY(85, 3); cout << char(191);
+    GotoXY(85, 13); cout << char(217);
+
+    GotoXY(90, 3); cout << char(218);
+    GotoXY(90, 13); cout << char(192);
+    GotoXY(110, 3); cout << char(191);
+    GotoXY(110, 13); cout << char(217);
+    setConsoleColor(9, 9);
+    int m = 15;
+    while (m <= 28)
+    {
+        for (int i = 70; i <= 115; i++)
+        {
+            GotoXY(i, m); cout << "*";
+        }
+        m++;
+    }
+    
+
+}
