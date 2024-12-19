@@ -1,0 +1,44 @@
+void khung21()//ve khung save game ko to mau
+{
+    setConsoleColor(0, 15);
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 12);
+        cout << char(196);
+    }
+    GotoXY(51, 13);
+    cout << "    LOAD GAME     ";
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 14);
+        cout << char(196);
+    }
+    GotoXY(50, 13); cout << char(179);
+    GotoXY(69, 13); cout << char(179);
+    GotoXY(50, 12); cout << char(218);
+    GotoXY(50, 14); cout << char(192);
+    GotoXY(69, 12); cout << char(191);
+    GotoXY(69, 14); cout << char(217);
+}
+void khung22()//ve khung save game co mau
+{
+    setConsoleColor(0, 11);
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 12);
+        cout << char(196);
+    }
+    GotoXY(51, 13);
+    cout << "    LOAD GAME     ";
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 14);
+        cout << char(196);
+    }
+    GotoXY(50, 13); cout << char(179);
+    GotoXY(69, 13); cout << char(179);
+    GotoXY(50, 12); cout << char(218);
+    GotoXY(50, 14); cout << char(192);
+    GotoXY(69, 12); cout << char(191);
+    GotoXY(69, 14); cout << char(217);
+}
