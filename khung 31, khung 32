@@ -1,0 +1,44 @@
+void khung31()//khung huong dan khong mau
+{
+    setConsoleColor(0, 15);
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 16);
+        cout << char(196);
+    }
+    GotoXY(51, 17);
+    cout << "    HUONG DAN     ";
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 18);
+        cout << char(196);
+    }
+    GotoXY(50, 17); cout << char(179);
+    GotoXY(69, 17); cout << char(179);
+    GotoXY(50, 16); cout << char(218);
+    GotoXY(50, 18); cout << char(192);
+    GotoXY(69, 16); cout << char(191);
+    GotoXY(69, 18); cout << char(217);
+}
+void khung32()//khung huong dan co mau
+{
+    setConsoleColor(0, 11);
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 16);
+        cout << char(196);
+    }
+    GotoXY(51, 17);
+    cout << "    HUONG DAN     ";
+    for (int i = 50; i < 70; i++)
+    {
+        GotoXY(i, 18);
+        cout << char(196);
+    }
+    GotoXY(50, 17); cout << char(179);
+    GotoXY(69, 17); cout << char(179);
+    GotoXY(50, 16); cout << char(218);
+    GotoXY(50, 18); cout << char(192);
+    GotoXY(69, 16); cout << char(191);
+    GotoXY(69, 18); cout << char(217);
+}
